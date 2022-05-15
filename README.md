@@ -3,6 +3,9 @@
 - остатки табака на складе
 - миксы табака (рейтинг: вкус/крепость)
 
+![alt text](https://github.com/efer92/hookahapp/blob/master/hookahapp-front/preview.jpg?raw=true)
+
+
 # HookahappBack
 Run python manage.py runserver
 
