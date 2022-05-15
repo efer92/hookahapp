@@ -1,6 +1,12 @@
-# hookahapp
+# Hookahapp
+Автоматизация кальянной
+- остатки табака на складе
+- миксы табака (рейтинг: вкус/крепость)
 
-HookahappFront
+# HookahappBack
+Run python manage.py runserver
+
+# HookahappFront
 
 This project was generated with Angular CLI version 9.1.7.
 
