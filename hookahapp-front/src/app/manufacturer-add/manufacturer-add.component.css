@@ -1,0 +1,14 @@
+.container {
+  margin: 2em auto;
+  text-align: center;
+  min-width: 300px;
+  min-height: 260px;
+}
+
+.add-full-width {
+  width: 100%;
+}
+
+.row {
+  justify-content: center;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Новый микс</h2>
+  <form>
+        <mat-form-field>
+          <mat-label>Название микса</mat-label>
+          <input matInput placeholder="Enter name" #mixName>
+        </mat-form-field>
+    <br>
+        <mat-form-field>
+          <mat-label>Чаша</mat-label>
+          <mat-select [(ngModel)]="selectedBowl" name="manufacturer">
+            <mat-option *ngFor="let bowl of bowls" [value]="bowl.id">{{bowl.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+    <br>
+          <mat-label>Крепость</mat-label>
+          <ngb-rating [(rate)]="strength" max="10"></ngb-rating>
+    <br>
+          <mat-label>Оценка</mat-label>
+          <ngb-rating [(rate)]="rating" max="5" ></ngb-rating>
+    <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Описание</mat-label>
+          <textarea matInput #description></textarea>
+        </mat-form-field>
+
+      </form>
+  <button mat-raised-button color="primary" (click)="addMix(mixName.value,rating, strength, selectedBowl, description.value); mixName.value=''" [mat-dialog-close]="mixName.value">Сохранить</button>
+</div>
+

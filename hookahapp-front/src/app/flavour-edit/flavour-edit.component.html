@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <h2 class="col">{{flavour.flavour_name}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-lg">
+      <mat-card class="add-card mat-elevation-z8">
+        <mat-card-content>
+          <form>
+            <mat-form-field>
+              <mat-label>Аромат</mat-label>
+              <input matInput placeholder="name" [(ngModel)]="flavour.flavour_name" name="flavour_name">
+            </mat-form-field><br>
+              <mat-checkbox value="checked" (change)="changeValue()" [checked]="flavour.in_stock">В наличии</mat-checkbox><br>
+            <mat-form-field appearance="fill">
+              <mat-label *ngFor="let type of flavour.flavour_type">{{type.type}} </mat-label>
+              <mat-select [(ngModel)]="flavour.flavour_type" name="flavour_type" multiple>
+                <mat-option *ngFor="let flavour_type of flavourTypes" [value]="flavour_type.id">{{flavour_type.type}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Описание</mat-label>
+              <textarea matInput [(ngModel)]="flavour.description" name="description"></textarea>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="goBack()">Назад</button>
+          <button mat-raised-button color="primary" (click)="save()">Сохранить</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
